@@ -61,8 +61,8 @@ The only external requirement is a PostgreSQL database.
 
 ## Contributing
 
-- [How to setup a development environment](./docs/development-environment.md)
-- [Monorepo architecture](./docs/monorepo-architecture.md)
+- [How to setup a development environment](./docs/docs/contributing/development-environment.md)
+- [Monorepo architecture](./docs/docs/contributing/monorepo-architecture.md)
 
 ## Beta disclaimer
 
