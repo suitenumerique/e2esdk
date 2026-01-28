@@ -6,7 +6,7 @@ services:
   # Application layer --
 
   app-db:
-    image: postgres:14.1
+    image: postgres:16.11-alpine
     ports:
       - '4001:5432'
     environment:
@@ -35,7 +35,7 @@ services:
   # e2esdk --
 
   e2esdk-db:
-    image: postgres:14.1
+    image: postgres:16.11-alpine
     ports:
       - '4004:5432'
     environment:

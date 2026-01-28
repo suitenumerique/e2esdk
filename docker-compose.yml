@@ -10,7 +10,7 @@ name: e2esdk-dev
 
 services:
   db:
-    image: postgres:14.1
+    image: postgres:16.11-alpine
     ports:
       - '3002:5432'
     environment:

@@ -36,7 +36,7 @@ name: e2esdk-getting-started
 
 services:
   db:
-    image: postgres:14
+    image: postgres:16.11-alpine
     ports:
       - '3002:5432'
     environment:
