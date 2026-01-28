@@ -33,6 +33,7 @@
     "prettier": "^2.8.6",
     "turbo": "^1.8.6"
   },
+  "packageManager": "pnpm@10.28.2",
   "prettier": {
     "arrowParens": "avoid",
     "semi": false,
