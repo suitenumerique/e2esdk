@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "bradgashler.htmltagwrap",
+    "christian-kohler.npm-intellisense",
+    "dbaeumer.vscode-eslint",
+    "EditorConfig.EditorConfig",
+    "esbenp.prettier-vscode",
+    "formulahendry.auto-rename-tag",
+    "lacroixdavid1.vscode-format-context-menu",
+    "Orta.vscode-jest",
+    "SimonSiefke.svg-preview",
+    "unifiedjs.vscode-mdx"
+  ]
+}

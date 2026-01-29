@@ -6,7 +6,6 @@ build/
 .next/
 .vite/
 *.env
-.vscode
 .changeset/.autocommit
 server-needs-publishing
 sceau.json

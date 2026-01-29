@@ -21,6 +21,8 @@
     "typecheck": "turbo run typecheck",
     "test": "turbo run test",
     "lint": "turbo run lint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "generate": "pnpm --filter @socialgouv/e2esdk-generator run generate",
     "db": "pnpm --filter @socialgouv/e2esdk-server run db",
     "mkcert": "mkcert -cert-file ./config/certs/tls.crt -key-file ./config/certs/tls.key localhost 127.0.0.1 ::1"
@@ -34,13 +36,6 @@
     "turbo": "^1.8.6"
   },
   "packageManager": "pnpm@10.28.2",
-  "prettier": {
-    "arrowParens": "avoid",
-    "semi": false,
-    "singleQuote": true,
-    "tabWidth": 2,
-    "useTabs": false
-  },
   "release": {
     "plugins": [
       [
