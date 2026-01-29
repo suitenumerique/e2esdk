@@ -13,13 +13,15 @@ import {
   Text,
   Tooltip,
 } from '@chakra-ui/react'
+import React from 'react'
+import { FiKey, FiTablet, FiUser } from 'react-icons/fi'
+import { MdOutlineLock } from 'react-icons/md'
+
 import {
   useE2ESDKClient,
   useE2ESDKClientIdentity,
 } from '@socialgouv/e2esdk-react'
-import React from 'react'
-import { FiKey, FiTablet, FiUser } from 'react-icons/fi'
-import { MdOutlineLock } from 'react-icons/md'
+
 import { usePortalRef } from './components/PortalProvider'
 import { SodiumState } from './components/SodiumState'
 import { useLocalState } from './hooks/useLocalState'

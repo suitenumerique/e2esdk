@@ -10,8 +10,6 @@ import {
   Stack,
   StackProps,
 } from '@chakra-ui/react'
-import { PublicUserIdentity } from '@socialgouv/e2esdk-client'
-import { useE2ESDKClient } from '@socialgouv/e2esdk-react'
 import { CopiableReadOnlyInput } from 'components/CopiableReadOnlyInput'
 import { LoadingButton } from 'components/LoadingButton'
 import { useShareKey } from 'hooks/useShareKey'
@@ -19,6 +17,9 @@ import type { NextPage } from 'next'
 import NextLink from 'next/link'
 import React from 'react'
 import { FiArrowRight, FiShare2 } from 'react-icons/fi'
+
+import { PublicUserIdentity } from '@socialgouv/e2esdk-client'
+import { useE2ESDKClient } from '@socialgouv/e2esdk-react'
 
 type ContactFormMetadata = {
   submissionBucketId: string

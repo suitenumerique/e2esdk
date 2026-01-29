@@ -1,7 +1,8 @@
-import { chakra, Icon, Stack, StackProps, Text } from '@chakra-ui/react'
-import type { PublicUserIdentity } from '@socialgouv/e2esdk-client'
+import { Icon, Stack, StackProps, Text, chakra } from '@chakra-ui/react'
 import React from 'react'
 import { FiLock, FiPenTool, FiShield, FiUser } from 'react-icons/fi'
+
+import type { PublicUserIdentity } from '@socialgouv/e2esdk-client'
 
 type IdentityProps = StackProps & {
   identity: PublicUserIdentity

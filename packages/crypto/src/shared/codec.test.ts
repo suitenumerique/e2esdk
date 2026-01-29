@@ -1,12 +1,12 @@
 import { ready, sodium } from '../sodium/sodium'
 import {
+  _xor,
   base64UrlDecode,
   base64UrlEncode,
   boolToBytes,
   bytesToBool,
   ieee754BytesToNumber,
   numberToIEEE754Bytes,
-  _xor,
 } from './codec'
 
 beforeAll(() => ready)

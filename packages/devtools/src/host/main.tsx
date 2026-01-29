@@ -1,6 +1,8 @@
-import { Client } from '@socialgouv/e2esdk-client'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+
+import { Client } from '@socialgouv/e2esdk-client'
+
 import '../index'
 import { E2ESDKDevtoolsElement } from '../index'
 import App from './App'

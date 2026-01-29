@@ -1,6 +1,8 @@
-import { thirtyTwoBytesHexSchema } from '@socialgouv/e2esdk-api'
 import { decode as decodeHex, encode as hexEncode } from '@stablelib/hex'
 import { z } from 'zod'
+
+import { thirtyTwoBytesHexSchema } from '@socialgouv/e2esdk-api'
+
 import { Sodium } from './sodium'
 
 export type BoxCipher<DataType = Uint8Array> = {

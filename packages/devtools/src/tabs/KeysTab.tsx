@@ -41,16 +41,6 @@ import {
   Tr,
   useDisclosure,
 } from '@chakra-ui/react'
-import {
-  Client,
-  KeychainItemMetadata,
-  PublicUserIdentity,
-} from '@socialgouv/e2esdk-client'
-import {
-  useE2ESDKClient,
-  useE2ESDKClientIdentity,
-  useE2ESDKClientKeys,
-} from '@socialgouv/e2esdk-react'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import React from 'react'
 import FocusLock from 'react-focus-lock'
@@ -70,6 +60,18 @@ import {
   FiUserMinus,
   FiUsers,
 } from 'react-icons/fi'
+
+import {
+  Client,
+  KeychainItemMetadata,
+  PublicUserIdentity,
+} from '@socialgouv/e2esdk-client'
+import {
+  useE2ESDKClient,
+  useE2ESDKClientIdentity,
+  useE2ESDKClientKeys,
+} from '@socialgouv/e2esdk-react'
+
 import { AlgorithmBadge, algorithmColors } from '../components/AlgorithmBadge'
 import { usePortalRef } from '../components/PortalProvider'
 import {

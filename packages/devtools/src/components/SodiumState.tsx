@@ -1,7 +1,8 @@
 import { Badge, BadgeProps, Icon, Text } from '@chakra-ui/react'
-import { useE2ESDKClient } from '@socialgouv/e2esdk-react'
 import React from 'react'
 import { FiCheckCircle, FiLoader } from 'react-icons/fi'
+
+import { useE2ESDKClient } from '@socialgouv/e2esdk-react'
 
 export const SodiumState: React.FC<BadgeProps> = props => {
   const client = useE2ESDKClient()

@@ -1,4 +1,5 @@
 import { z } from 'zod'
+
 import { signatureSchema, thirtyTwoBytesBase64Schema } from './encodings'
 
 export const identitySchema = z

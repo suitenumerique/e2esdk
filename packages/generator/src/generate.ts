@@ -1,11 +1,12 @@
 #!/usr/bin/env zx
-
 import {
   HandleRegistration,
   Registration,
   ServerSetup,
   set_panic_hook,
 } from '@47ng/opaque-server'
+import crypto from 'node:crypto'
+
 import { encodeDeviceRegistrationURI } from '@socialgouv/e2esdk-api'
 import {
   base64UrlEncode,
@@ -16,7 +17,6 @@ import {
   sodium,
   verifyMultipartSignature,
 } from '@socialgouv/e2esdk-crypto'
-import crypto from 'node:crypto'
 
 async function main() {
   await import('zx/globals')

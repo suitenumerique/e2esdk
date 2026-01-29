@@ -1,24 +1,26 @@
-import {
-  activeSessionSchema,
-  Identity,
-  identitySchema,
-  isFarFromCurrentTime,
-  requestHeaders,
-} from '@socialgouv/e2esdk-api'
-import {
-  decrypt,
-  encrypt,
-  fingerprint,
-  SecretBoxCipher,
-  signAuth as signResponse,
-  verifyClientIdentity,
-  verifyAuth as verifyClientSignature,
-} from '@socialgouv/e2esdk-crypto'
 import type { FastifyPluginAsync, FastifyRequest } from 'fastify'
 import fp from 'fastify-plugin'
 import crypto from 'node:crypto'
 import { z } from 'zod'
 import { zodToJsonSchema } from 'zod-to-json-schema'
+
+import {
+  Identity,
+  activeSessionSchema,
+  identitySchema,
+  isFarFromCurrentTime,
+  requestHeaders,
+} from '@socialgouv/e2esdk-api'
+import {
+  SecretBoxCipher,
+  decrypt,
+  encrypt,
+  fingerprint,
+  signAuth as signResponse,
+  verifyClientIdentity,
+  verifyAuth as verifyClientSignature,
+} from '@socialgouv/e2esdk-crypto'
+
 import { env } from '../env.js'
 import type { App } from '../types'
 

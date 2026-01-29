@@ -92,6 +92,7 @@ In React, you can use the `useE2ESDKClientIdentity` hook:
 
 ```tsx
 import React from 'react'
+
 import { useE2ESDKClientIdentity } from '@socialgouv/e2esdk-react'
 
 export const Profile: React.FC = () => {

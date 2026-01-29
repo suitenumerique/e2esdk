@@ -1,11 +1,13 @@
 import { BoxProps, Button, Stack } from '@chakra-ui/react'
+import React from 'react'
+import { FiLogOut, FiSearch, FiUser } from 'react-icons/fi'
+
 import type { PublicUserIdentity } from '@socialgouv/e2esdk-client'
 import {
   useE2ESDKClient,
   useE2ESDKClientIdentity,
 } from '@socialgouv/e2esdk-react'
-import React from 'react'
-import { FiLogOut, FiSearch, FiUser } from 'react-icons/fi'
+
 import { Identity } from '../components/Identity'
 import {
   Section,

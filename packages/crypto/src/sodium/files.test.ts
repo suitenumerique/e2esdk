@@ -1,6 +1,7 @@
 import { Blob } from 'node:buffer'
 import fs from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
+
 import { generateSecretBoxCipher } from './ciphers'
 import { decryptFileContents, encryptFileContents } from './files'
 import { ready, sodium } from './sodium'

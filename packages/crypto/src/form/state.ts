@@ -1,4 +1,5 @@
 import { thirtyTwoBytesBase64Schema } from '@socialgouv/e2esdk-api'
+
 import { base64UrlDecode, base64UrlEncode } from '../shared/codec'
 import { Sodium, sodium } from '../sodium/sodium'
 

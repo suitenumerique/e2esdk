@@ -1,7 +1,7 @@
 import {
-  decryptFileContents,
   FileMetadata,
   Sodium,
+  decryptFileContents,
 } from '@socialgouv/e2esdk-crypto'
 
 export async function uploadFiles(formData: FormData) {

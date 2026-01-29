@@ -1,10 +1,12 @@
-import {
-  checkSignaturePublicKey,
-  initializeSodium,
-  Sodium,
-} from '@socialgouv/e2esdk-crypto'
 import type { FastifyPluginAsync } from 'fastify'
 import fp from 'fastify-plugin'
+
+import {
+  Sodium,
+  checkSignaturePublicKey,
+  initializeSodium,
+} from '@socialgouv/e2esdk-crypto'
+
 import '../env.js'
 import { env } from '../env.js'
 import type { App } from '../types'

@@ -1,15 +1,17 @@
 import { HandleRegistration } from '@47ng/opaque-server'
+import { zodToJsonSchema } from 'zod-to-json-schema'
+
 import {
   SignupCompleteResponse,
+  SignupRecord,
+  SignupRequest,
+  SignupResponse,
   signupCompleteResponse,
   signupRecord,
-  SignupRecord,
   signupRequest,
-  SignupRequest,
   signupResponse,
-  SignupResponse,
 } from '@socialgouv/e2esdk-api'
-import { zodToJsonSchema } from 'zod-to-json-schema'
+
 import { createDevice } from '../../database/models/devices.js'
 import { createIdentity } from '../../database/models/identity.js'
 import { env } from '../../env.js'

@@ -1,6 +1,7 @@
 import websocket from '@fastify/websocket'
 import type { FastifyPluginAsync } from 'fastify'
 import fp from 'fastify-plugin'
+
 import type { App } from '../types'
 
 /**

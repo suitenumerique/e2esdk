@@ -11,10 +11,11 @@ import {
   InputRightElement,
   Spinner,
 } from '@chakra-ui/react'
-import type { PublicUserIdentity } from '@socialgouv/e2esdk-client'
-import { useE2ESDKClient } from '@socialgouv/e2esdk-react'
 import React from 'react'
 import { FiUser } from 'react-icons/fi'
+
+import type { PublicUserIdentity } from '@socialgouv/e2esdk-client'
+import { useE2ESDKClient } from '@socialgouv/e2esdk-react'
 
 type UserIdentityInputProps = FormControlProps & {
   label?: string

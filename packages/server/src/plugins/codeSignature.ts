@@ -9,6 +9,7 @@ import {
   verify,
 } from 'sceau'
 import { fileURLToPath } from 'url'
+
 import { env } from '../env.js'
 import type { App } from '../types'
 

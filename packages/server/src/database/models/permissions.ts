@@ -1,6 +1,8 @@
-import type { Optional } from '@socialgouv/e2esdk-api'
 import type { Sql } from 'postgres'
 import { z } from 'zod'
+
+import type { Optional } from '@socialgouv/e2esdk-api'
+
 import { getFirst } from './helpers.js'
 
 export const TABLE_NAME = 'e2esdk_permissions'

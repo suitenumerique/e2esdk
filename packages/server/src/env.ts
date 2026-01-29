@@ -1,8 +1,9 @@
 import { ServerSetup } from '@47ng/opaque-server'
-import { base64Bytes } from '@socialgouv/e2esdk-api'
-import { base64UrlDecode } from '@socialgouv/e2esdk-crypto'
 import dotenv from 'dotenv'
 import { z } from 'zod'
+
+import { base64Bytes } from '@socialgouv/e2esdk-api'
+import { base64UrlDecode } from '@socialgouv/e2esdk-crypto'
 
 dotenv.config()
 

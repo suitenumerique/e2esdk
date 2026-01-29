@@ -1,12 +1,14 @@
-import {
-  fingerprintSchema,
-  getParticipantsResponseBody,
-  GetParticipantsResponseBody,
-  requestHeaders,
-  RequestHeaders,
-} from '@socialgouv/e2esdk-api'
 import { z } from 'zod'
 import { zodToJsonSchema } from 'zod-to-json-schema'
+
+import {
+  GetParticipantsResponseBody,
+  RequestHeaders,
+  fingerprintSchema,
+  getParticipantsResponseBody,
+  requestHeaders,
+} from '@socialgouv/e2esdk-api'
+
 import { getParticipantsWithPermissions } from '../database/models/participants.js'
 import type { App } from '../types'
 

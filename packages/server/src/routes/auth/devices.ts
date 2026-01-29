@@ -1,24 +1,26 @@
 import { HandleRegistration } from '@47ng/opaque-server'
+import { z } from 'zod'
+import { zodToJsonSchema } from 'zod-to-json-schema'
+
 import {
   ActiveSession,
   Device,
   DeviceEnrolledResponse,
-  deviceEnrolledResponse,
   DeviceEnrollmentRecord,
+  DeviceEnrollmentRequest,
+  DeviceEnrollmentResponse,
+  ListDevicesResponseBody,
+  RequestHeaders,
+  deviceEnrolledResponse,
   deviceEnrollmentRecord,
   deviceEnrollmentRequest,
-  DeviceEnrollmentRequest,
   deviceEnrollmentResponse,
-  DeviceEnrollmentResponse,
   deviceIdSchema,
   deviceSchema,
   listDevicesResponseBody,
-  ListDevicesResponseBody,
   requestHeaders,
-  RequestHeaders,
 } from '@socialgouv/e2esdk-api'
-import { z } from 'zod'
-import { zodToJsonSchema } from 'zod-to-json-schema'
+
 import {
   createDevice,
   deleteUserDevice,

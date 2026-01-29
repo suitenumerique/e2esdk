@@ -18,6 +18,14 @@ import {
   useMultiStyleConfig,
   useToast,
 } from '@chakra-ui/react'
+import request, { gql } from 'graphql-request'
+import Link from 'next/link'
+import prettyBytes from 'pretty-bytes'
+import React from 'react'
+import { useForm } from 'react-hook-form'
+import { FiSend, FiX } from 'react-icons/fi'
+import { z } from 'zod'
+
 import {
   decryptFormForEdition,
   encryptFile,
@@ -27,13 +35,7 @@ import {
   isEncryptedFormLocalStatePersisted,
   persistEncryptedFormLocalState,
 } from '@socialgouv/e2esdk-crypto'
-import request, { gql } from 'graphql-request'
-import Link from 'next/link'
-import prettyBytes from 'pretty-bytes'
-import React from 'react'
-import { useForm } from 'react-hook-form'
-import { FiSend, FiX } from 'react-icons/fi'
-import { z } from 'zod'
+
 import { downloadAndDecryptFile, uploadFiles } from './files'
 
 const formSchema = z.object({

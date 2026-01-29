@@ -1,10 +1,12 @@
-import {
-  postBanRequestBody,
-  PostBanRequestBody,
-  requestHeaders,
-  RequestHeaders,
-} from '@socialgouv/e2esdk-api'
 import { zodToJsonSchema } from 'zod-to-json-schema'
+
+import {
+  PostBanRequestBody,
+  RequestHeaders,
+  postBanRequestBody,
+  requestHeaders,
+} from '@socialgouv/e2esdk-api'
+
 import { deleteKeychainItems } from '../database/models/keychain.js'
 import {
   deletePermission,

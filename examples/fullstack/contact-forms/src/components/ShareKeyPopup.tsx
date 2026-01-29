@@ -12,12 +12,14 @@ import {
   PopoverTrigger,
   useDisclosure,
 } from '@chakra-ui/react'
-import { PublicUserIdentity } from '@socialgouv/e2esdk-client'
-import { useE2ESDKClient } from '@socialgouv/e2esdk-react'
 import { useSubmissionCommentsKey } from 'lib/comments'
 import React from 'react'
 import FocusLock from 'react-focus-lock'
 import { FiShare2, FiShield } from 'react-icons/fi'
+
+import { PublicUserIdentity } from '@socialgouv/e2esdk-client'
+import { useE2ESDKClient } from '@socialgouv/e2esdk-react'
+
 import { UserIdentityInput } from './UserIdentityInput'
 
 type ShareKeyPopupProps = ButtonProps & {

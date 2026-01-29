@@ -2,6 +2,7 @@ import swagger from '@fastify/swagger'
 import swaggerUI from '@fastify/swagger-ui'
 import type { FastifyPluginAsync } from 'fastify'
 import fp from 'fastify-plugin'
+
 import { env } from '../env.js'
 import type { App } from '../types'
 

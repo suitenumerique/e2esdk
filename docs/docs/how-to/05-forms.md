@@ -42,8 +42,8 @@ rewriting the public key to one it controls.
 
 ```ts
 import {
-  initializeEncryptedFormLocalState,
   encryptFormData,
+  initializeEncryptedFormLocalState,
 } from '@socialgouv/e2esdk-crypto'
 
 async function onSubmit(formValues: Record<string, any>) {
@@ -149,9 +149,9 @@ You can then download the encrypted contents, and use the key in the metadata to
 
 ```ts
 import {
-  decryptFileContents,
   FileMetadata,
   Sodium,
+  decryptFileContents,
 } from '@socialgouv/e2esdk-crypto'
 
 async function downloadAndDecryptFile(sodium: Sodium, metadata: FileMetadata) {
@@ -197,9 +197,9 @@ On the submitter side, edition can be performed by:
 
 ```ts
 import {
+  decryptFormForEdition,
   initializeEncryptedFormLocalState,
   persistEncryptedFormLocalState,
-  decryptFormForEdition,
 } from '@socialgouv/e2esdk-crypto'
 
 const NAMESPACE = 'my-form'

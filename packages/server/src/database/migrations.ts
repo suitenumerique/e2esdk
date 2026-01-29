@@ -1,5 +1,4 @@
 // Inspired from https://github.com/porsager/postgres-shift
-
 import fsSync from 'node:fs'
 import fs from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'

@@ -1,14 +1,14 @@
 import {
   BoxCipher,
   CIPHER_MAX_PADDED_LENGTH,
+  SecretBoxCipher,
   generateBoxCipher,
   generateBoxKeyPair,
   generateSealedBoxCipher,
   generateSecretBoxCipher,
-  SecretBoxCipher,
   serializeCipher,
 } from './ciphers'
-import { ready, Sodium, sodium } from './sodium'
+import { Sodium, ready, sodium } from './sodium'
 
 // --
 

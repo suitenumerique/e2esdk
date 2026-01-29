@@ -1,12 +1,13 @@
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
+import request, { gql } from 'graphql-request'
+import { z } from 'zod'
+
 import {
   identitySchema,
   secretBoxCiphertextV1Schema,
   signatureSchema,
 } from '@socialgouv/e2esdk-api'
 import { useE2ESDKClient } from '@socialgouv/e2esdk-react'
-import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
-import request, { gql } from 'graphql-request'
-import { z } from 'zod'
 
 // List comments --
 

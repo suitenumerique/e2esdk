@@ -1,7 +1,9 @@
 import cors, { FastifyCorsOptions } from '@fastify/cors'
-import { requestHeaders, responseHeaders } from '@socialgouv/e2esdk-api'
 import type { FastifyPluginAsync } from 'fastify'
 import fp from 'fastify-plugin'
+
+import { requestHeaders, responseHeaders } from '@socialgouv/e2esdk-api'
+
 import { env } from '../env.js'
 import type { App } from '../types'
 

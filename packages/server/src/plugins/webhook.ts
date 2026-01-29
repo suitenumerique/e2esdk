@@ -1,3 +1,7 @@
+import type { FastifyPluginAsync, FastifyRequest } from 'fastify'
+import fp from 'fastify-plugin'
+import { env } from 'process'
+
 import {
   Identity,
   PostKeychainItemRequestBody,
@@ -5,9 +9,7 @@ import {
   WebhookRoutes,
 } from '@socialgouv/e2esdk-api'
 import { signAuth } from '@socialgouv/e2esdk-crypto'
-import type { FastifyPluginAsync, FastifyRequest } from 'fastify'
-import fp from 'fastify-plugin'
-import { env } from 'process'
+
 import type { App } from '../types'
 
 // Don't bother sending end-to-end encrypted fields in webhook payloads,

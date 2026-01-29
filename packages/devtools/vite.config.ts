@@ -6,7 +6,7 @@ import { ServerOptions } from 'node:https'
 import path from 'node:path'
 import { visualizer } from 'rollup-plugin-visualizer'
 import type { TemplateType } from 'rollup-plugin-visualizer/dist/plugin/template-types'
-import { defineConfig, PluginOption } from 'vite'
+import { PluginOption, defineConfig } from 'vite'
 import topLevelAwait from 'vite-plugin-top-level-await'
 import wasm from 'vite-plugin-wasm'
 

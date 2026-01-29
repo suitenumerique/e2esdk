@@ -1,9 +1,11 @@
+import { z } from 'zod'
+
 import {
   sealedBoxCiphertextV1Schema,
   signatureSchema,
   thirtyTwoBytesBase64Schema,
 } from '@socialgouv/e2esdk-api'
-import { z } from 'zod'
+
 import { base64UrlDecode, numberToUint32LE } from '../shared/codec'
 import { SealedBoxCipher, SecretBoxCipher } from '../sodium/ciphers'
 import { decrypt, encrypt } from '../sodium/encryption'

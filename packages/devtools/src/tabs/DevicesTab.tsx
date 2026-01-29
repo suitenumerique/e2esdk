@@ -7,13 +7,15 @@ import {
   Stack,
   Text,
 } from '@chakra-ui/react'
+import { useQuery } from '@tanstack/react-query'
+import React from 'react'
+import { FiPlusSquare, FiTablet } from 'react-icons/fi'
+
 import {
   useE2ESDKClient,
   useE2ESDKClientIdentity,
 } from '@socialgouv/e2esdk-react'
-import { useQuery } from '@tanstack/react-query'
-import React from 'react'
-import { FiPlusSquare, FiTablet } from 'react-icons/fi'
+
 import {
   Section,
   SectionContainer,

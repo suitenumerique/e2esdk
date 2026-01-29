@@ -1,4 +1,5 @@
 import { z } from 'zod'
+
 import { identitySchema } from './schemas/identity'
 
 export const getSingleIdentityResponseBody = identitySchema

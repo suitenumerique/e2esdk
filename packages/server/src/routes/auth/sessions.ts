@@ -1,13 +1,15 @@
-import {
-  ActiveSession,
-  activeSessionSchema,
-  getActiveSessionsResponseBody,
-  GetActiveSessionsResponseBody,
-  requestHeaders,
-  RequestHeaders,
-} from '@socialgouv/e2esdk-api'
 import { z } from 'zod'
 import { zodToJsonSchema } from 'zod-to-json-schema'
+
+import {
+  ActiveSession,
+  GetActiveSessionsResponseBody,
+  RequestHeaders,
+  activeSessionSchema,
+  getActiveSessionsResponseBody,
+  requestHeaders,
+} from '@socialgouv/e2esdk-api'
+
 import { decryptSession } from '../../plugins/auth.js'
 import { App } from '../../types'
 

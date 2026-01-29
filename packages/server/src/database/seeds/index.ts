@@ -1,4 +1,5 @@
 import { Sql } from 'postgres'
+
 import { TABLE_NAME as DEVICES_TABLE } from '../models/devices.js'
 import { TABLE_NAME as IDENTITY_TABLE } from '../models/identity.js'
 import { SEED_USERS } from './identities.js'

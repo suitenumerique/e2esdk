@@ -1,14 +1,16 @@
-import {
-  fingerprintSchema,
-  permissionFlags,
-  PermissionFlags,
-  postPermissionRequestBody,
-  PostPermissionRequestBody,
-  RequestHeaders,
-  requestHeaders,
-} from '@socialgouv/e2esdk-api'
 import { z } from 'zod'
 import { zodToJsonSchema } from 'zod-to-json-schema'
+
+import {
+  PermissionFlags,
+  PostPermissionRequestBody,
+  RequestHeaders,
+  fingerprintSchema,
+  permissionFlags,
+  postPermissionRequestBody,
+  requestHeaders,
+} from '@socialgouv/e2esdk-api'
+
 import {
   getPermission,
   updatePermission,

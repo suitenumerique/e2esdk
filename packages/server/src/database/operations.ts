@@ -1,19 +1,18 @@
 #!/usr/bin/env zx
-
 // Inspired from https://github.com/porsager/postgres-shift
-
 import dotenv from 'dotenv'
 import { dirname, resolve } from 'node:path'
 import postgres, { Sql } from 'postgres'
 import { spinner } from 'zx/experimental'
 import 'zx/globals'
+
 import { databaseConnectionOptions } from './connectionOptions.js'
 import {
   DatabaseMigration,
   FileSystemMigration,
-  listMigrations as _listMigrations,
   MIGRATIONS_DIR,
   MIGRATIONS_TABLE_NAME,
+  listMigrations as _listMigrations,
 } from './migrations.js'
 
 // Constants --

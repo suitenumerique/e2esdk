@@ -8,10 +8,11 @@ import {
   Stack,
   Text,
 } from '@chakra-ui/react'
-import { useE2ESDKClient } from '@socialgouv/e2esdk-react'
 import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import React from 'react'
+
+import { useE2ESDKClient } from '@socialgouv/e2esdk-react'
 
 const LoginPage: NextPage = () => {
   const [userId, setUserId] = React.useState('')

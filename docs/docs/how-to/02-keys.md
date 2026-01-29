@@ -118,6 +118,7 @@ In React, you can use the `useE2ESDKClientKeys` hook:
 
 ```tsx
 import React from 'react'
+
 import { useE2ESDKClientKeys } from '@socialgouv/e2esdk-react'
 
 export const Keys: React.FC = () => {

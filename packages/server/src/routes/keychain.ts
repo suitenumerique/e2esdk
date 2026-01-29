@@ -1,17 +1,19 @@
+import { z } from 'zod'
+import { zodToJsonSchema } from 'zod-to-json-schema'
+
 import {
   GetKeychainResponseBody,
+  PostKeychainItemRequestBody,
+  RequestHeaders,
   getKeychainResponseBody,
   postKeychainItemRequestBody,
-  PostKeychainItemRequestBody,
   requestHeaders,
-  RequestHeaders,
 } from '@socialgouv/e2esdk-api'
 import {
   numberToUint32LE,
   verifyMultipartSignature,
 } from '@socialgouv/e2esdk-crypto'
-import { z } from 'zod'
-import { zodToJsonSchema } from 'zod-to-json-schema'
+
 import {
   deleteKeychainItem,
   getKeyNameParticipants,

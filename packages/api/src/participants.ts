@@ -1,4 +1,5 @@
 import { z } from 'zod'
+
 import { permissionFlags } from './permissions'
 import { timestampSchema } from './schemas/encodings'
 import { identitySchema } from './schemas/identity'

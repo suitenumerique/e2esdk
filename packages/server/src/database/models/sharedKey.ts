@@ -1,5 +1,6 @@
 import type { Sql } from 'postgres'
 import { z } from 'zod'
+
 import { getFirst } from './helpers.js'
 import type { IdentitySchema } from './identity'
 

@@ -1,6 +1,7 @@
 import type { FastifyPluginAsync } from 'fastify'
 import fp from 'fastify-plugin'
 import postgres from 'postgres'
+
 import { databaseConnectionOptions } from '../database/connectionOptions.js'
 import { listMigrations } from '../database/migrations.js'
 import '../env.js'

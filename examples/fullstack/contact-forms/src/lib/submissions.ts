@@ -1,10 +1,11 @@
-import type { Client, KeychainItemMetadata } from '@socialgouv/e2esdk-client'
-import { fileMetadataSchema } from '@socialgouv/e2esdk-crypto'
-import { useE2ESDKClient } from '@socialgouv/e2esdk-react'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import request, { gql } from 'graphql-request'
 import { useRouter } from 'next/router'
 import { z } from 'zod'
+
+import type { Client, KeychainItemMetadata } from '@socialgouv/e2esdk-client'
+import { fileMetadataSchema } from '@socialgouv/e2esdk-crypto'
+import { useE2ESDKClient } from '@socialgouv/e2esdk-react'
 
 export function useSubmissionBucketIdUrlParam() {
   const router = useRouter()

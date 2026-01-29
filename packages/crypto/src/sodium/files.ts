@@ -1,6 +1,8 @@
-import { thirtyTwoBytesBase64Schema } from '@socialgouv/e2esdk-api'
 import { z } from 'zod'
-import { generateSecretBoxCipher, SecretBoxCipher } from './ciphers'
+
+import { thirtyTwoBytesBase64Schema } from '@socialgouv/e2esdk-api'
+
+import { SecretBoxCipher, generateSecretBoxCipher } from './ciphers'
 import { Sodium } from './sodium'
 
 export const DEFAULT_FILE_CHUNK_SIZE = 4096

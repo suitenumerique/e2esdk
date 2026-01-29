@@ -1,4 +1,5 @@
 import crypto from 'node:crypto'
+
 import { generateManifest } from './manifest'
 
 describe('manifest', () => {

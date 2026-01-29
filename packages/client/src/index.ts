@@ -1,5 +1,10 @@
 import initOpaqueClient, { Login, Registration } from '@47ng/opaque-client'
 import { wasmBase64 as opaqueWasm } from '@47ng/opaque-client/inline-wasm'
+import { LocalStateSync } from 'local-state-sync'
+import mitt, { Emitter } from 'mitt'
+import secureJSON from 'secure-json-parse'
+import { z } from 'zod'
+
 import {
   DeviceEnrollmentRecord,
   GetKeychainResponseBody,
@@ -76,10 +81,6 @@ import {
   verifyMultipartSignature,
   verifyAuth as verifyServerSignature,
 } from '@socialgouv/e2esdk-crypto'
-import { LocalStateSync } from 'local-state-sync'
-import mitt, { Emitter } from 'mitt'
-import secureJSON from 'secure-json-parse'
-import { z } from 'zod'
 
 /**
  * Configuration object for the e2esdk client constructor

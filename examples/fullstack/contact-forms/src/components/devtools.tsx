@@ -1,7 +1,8 @@
+import React from 'react'
+
 import '@socialgouv/e2esdk-devtools'
 import { E2ESDKDevtoolsElement } from '@socialgouv/e2esdk-devtools'
 import { useE2ESDKClient } from '@socialgouv/e2esdk-react'
-import React from 'react'
 
 export const Devtools = () => {
   const client = useE2ESDKClient()

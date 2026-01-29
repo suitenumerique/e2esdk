@@ -12,10 +12,6 @@ import {
   Stack,
   Text,
 } from '@chakra-ui/react'
-import {
-  useE2ESDKClient,
-  useE2ESDKClientIdentity,
-} from '@socialgouv/e2esdk-react'
 import { ColorModeSwitch } from 'components/colorModeSwitch'
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
@@ -29,6 +25,12 @@ import {
   FiUser,
 } from 'react-icons/fi'
 import { MdOutlineLock } from 'react-icons/md'
+
+import {
+  useE2ESDKClient,
+  useE2ESDKClientIdentity,
+} from '@socialgouv/e2esdk-react'
+
 import { NoSSR } from './NoSSR'
 
 type PageLayoutProps = FlexProps & {

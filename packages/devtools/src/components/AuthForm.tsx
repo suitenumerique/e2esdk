@@ -7,11 +7,12 @@ import {
   Stack,
   StackProps,
 } from '@chakra-ui/react'
-import { useE2ESDKClient } from '@socialgouv/e2esdk-react'
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { FiLogIn, FiPlusCircle } from 'react-icons/fi'
 import { z } from 'zod'
+
+import { useE2ESDKClient } from '@socialgouv/e2esdk-react'
 
 type AuthFormProps = Omit<StackProps, 'onSubmit'> & {
   onSubmit: (formValues: FormValues) => Promise<any> | void

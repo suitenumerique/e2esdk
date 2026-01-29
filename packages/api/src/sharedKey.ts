@@ -1,8 +1,9 @@
 import { z } from 'zod'
+
 import {
+  PayloadType,
   boxCiphertextV1Schema,
   fingerprintSchema,
-  PayloadType,
   signatureSchema,
   timestampSchema,
 } from './schemas/encodings'

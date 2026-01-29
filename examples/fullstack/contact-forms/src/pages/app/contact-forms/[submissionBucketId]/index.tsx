@@ -18,7 +18,6 @@ import {
   Thead,
   Tr,
 } from '@chakra-ui/react'
-import { useE2ESDKClientKeys } from '@socialgouv/e2esdk-react'
 import { CopiableReadOnlyInput } from 'components/CopiableReadOnlyInput'
 import { NoSSR } from 'components/NoSSR'
 import { ShareKeyPopup } from 'components/ShareKeyPopup'
@@ -32,6 +31,8 @@ import { useRouter } from 'next/router'
 import React from 'react'
 import { FiCheck, FiX } from 'react-icons/fi'
 import { z } from 'zod'
+
+import { useE2ESDKClientKeys } from '@socialgouv/e2esdk-react'
 
 const ContactFormResultsPage: NextPage = () => {
   const router = useRouter()

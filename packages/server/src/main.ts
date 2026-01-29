@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-
 import { fileURLToPath } from 'node:url'
+
 import './env.js'
 import { createServer, startServer } from './server.js'
 

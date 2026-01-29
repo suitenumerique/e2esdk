@@ -1,5 +1,6 @@
 import type { FastifyBaseLogger, FastifyPluginCallback } from 'fastify'
 import fp from 'fastify-plugin'
+
 import type { App } from '../types'
 
 declare module 'fastify' {

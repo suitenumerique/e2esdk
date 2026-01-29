@@ -1,15 +1,17 @@
-import {
-  fingerprintSchema,
-  getSharedKeysResponseBody,
-  GetSharedKeysResponseBody,
-  identitySchema,
-  postSharedKeyBody,
-  PostSharedKeyBody,
-  RequestHeaders,
-  requestHeaders,
-} from '@socialgouv/e2esdk-api'
 import { z } from 'zod'
 import { zodToJsonSchema } from 'zod-to-json-schema'
+
+import {
+  GetSharedKeysResponseBody,
+  PostSharedKeyBody,
+  RequestHeaders,
+  fingerprintSchema,
+  getSharedKeysResponseBody,
+  identitySchema,
+  postSharedKeyBody,
+  requestHeaders,
+} from '@socialgouv/e2esdk-api'
+
 import { getKeychainItem } from '../database/models/keychain.js'
 import { getPermission } from '../database/models/permissions.js'
 import {

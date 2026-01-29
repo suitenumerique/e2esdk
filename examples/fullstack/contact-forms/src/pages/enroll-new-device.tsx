@@ -8,9 +8,10 @@ import {
   Stack,
   Text,
 } from '@chakra-ui/react'
-import { useE2ESDKClient } from '@socialgouv/e2esdk-react'
 import type { NextPage } from 'next'
 import React from 'react'
+
+import { useE2ESDKClient } from '@socialgouv/e2esdk-react'
 
 const EnrollDevicePage: NextPage = () => {
   const [label, setLabel] = React.useState<string | undefined>()

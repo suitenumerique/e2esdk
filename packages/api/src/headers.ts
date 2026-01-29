@@ -1,4 +1,5 @@
 import { z } from 'zod'
+
 import { deviceIdSchema } from './schemas/devices'
 import {
   fingerprintSchema,

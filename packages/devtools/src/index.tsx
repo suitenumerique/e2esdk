@@ -1,19 +1,21 @@
 import {
   ChakraProvider,
   DarkMode,
-  extendTheme,
   LightMode,
   ThemeConfig,
+  extendTheme,
 } from '@chakra-ui/react'
 import createCache from '@emotion/cache'
 import { CacheProvider } from '@emotion/react'
-import type { ClientConfig } from '@socialgouv/e2esdk-client'
-import { Client } from '@socialgouv/e2esdk-client'
-import { E2ESDKClientProvider } from '@socialgouv/e2esdk-react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import * as React from 'react'
 import { createRoot } from 'react-dom/client'
+
+import type { ClientConfig } from '@socialgouv/e2esdk-client'
+import { Client } from '@socialgouv/e2esdk-client'
+import { E2ESDKClientProvider } from '@socialgouv/e2esdk-react'
+
 import { PortalProvider } from './components/PortalProvider'
 import { E2ESdkDevtoolsView } from './view'
 

@@ -1,6 +1,8 @@
-import { PayloadType } from '@socialgouv/e2esdk-api'
 import type { Uint8ArrayOutputFormat } from 'libsodium-wrappers'
 import secureJSON from 'secure-json-parse'
+
+import { PayloadType } from '@socialgouv/e2esdk-api'
+
 import {
   boolToBytes,
   bytesToBool,

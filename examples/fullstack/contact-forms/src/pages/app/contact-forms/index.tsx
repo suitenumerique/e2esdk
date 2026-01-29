@@ -7,10 +7,11 @@ import {
   Stack,
   Text,
 } from '@chakra-ui/react'
-import { useE2ESDKClientKeys } from '@socialgouv/e2esdk-react'
 import { NoSSR } from 'components/NoSSR'
 import type { NextPage } from 'next'
 import NextLink from 'next/link'
+
+import { useE2ESDKClientKeys } from '@socialgouv/e2esdk-react'
 
 const ContactFormsPage: NextPage = () => {
   const buckets = useContactFormNames()

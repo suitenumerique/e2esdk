@@ -1,6 +1,4 @@
 import { ChakraProvider, HStack } from '@chakra-ui/react'
-import { Client } from '@socialgouv/e2esdk-client'
-import { E2ESDKClientProvider } from '@socialgouv/e2esdk-react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { ColorModeSwitch } from 'components/colorModeSwitch'
@@ -8,6 +6,9 @@ import { PageLayout } from 'components/pageLayout'
 import type { AppProps } from 'next/app'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
+
+import { Client } from '@socialgouv/e2esdk-client'
+import { E2ESDKClientProvider } from '@socialgouv/e2esdk-react'
 
 const e2esdkClient = new Client({
   serverURL: 'https://localhost:4003',

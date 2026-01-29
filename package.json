@@ -30,6 +30,7 @@
   "devDependencies": {
     "@semantic-release/exec": "^6.0.3",
     "@socialgouv/e2esdk-semantic-release": "workspace:*",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@types/jest": "^29.5.0",
     "multi-semantic-release": "^3.0.2",
     "prettier": "^2.8.6",

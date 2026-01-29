@@ -1,11 +1,11 @@
 // https://chadalen.com/blog/how-to-use-a-multipart-form-in-nextjs-using-api-routes
-
-import { fileMetadataSchema } from '@socialgouv/e2esdk-crypto'
 import formidable from 'formidable'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { createReadStream } from 'node:fs'
 import fs from 'node:fs/promises'
 import path from 'node:path'
+
+import { fileMetadataSchema } from '@socialgouv/e2esdk-crypto'
 
 export const config = {
   api: {

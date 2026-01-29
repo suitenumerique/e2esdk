@@ -1,10 +1,12 @@
-import {
-  requestHeaders,
-  WebSocketNotificationTypes,
-} from '@socialgouv/e2esdk-api'
 import mitt from 'mitt'
 import { z } from 'zod'
 import { zodToJsonSchema } from 'zod-to-json-schema'
+
+import {
+  WebSocketNotificationTypes,
+  requestHeaders,
+} from '@socialgouv/e2esdk-api'
+
 import { keychainUpdatedNotificationChannel } from '../database/models/keychain.js'
 import { sharedKeyInsertsNotificationChannel } from '../database/models/sharedKey.js'
 import type { App } from '../types'

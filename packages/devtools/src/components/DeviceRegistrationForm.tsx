@@ -8,11 +8,12 @@ import {
   Stack,
   StackProps,
 } from '@chakra-ui/react'
-import { useE2ESDKClient } from '@socialgouv/e2esdk-react'
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { FiSave } from 'react-icons/fi'
 import { z } from 'zod'
+
+import { useE2ESDKClient } from '@socialgouv/e2esdk-react'
 
 const formSchema = z.object({
   uri: z.string(),

@@ -1,13 +1,15 @@
-import {
-  getMultipleIdentitiesResponseBody,
-  GetMultipleIdentitiesResponseBody,
-  getSingleIdentityResponseBody,
-  GetSingleIdentityResponseBody,
-  requestHeaders,
-  RequestHeaders,
-} from '@socialgouv/e2esdk-api'
 import { z } from 'zod'
 import { zodToJsonSchema } from 'zod-to-json-schema'
+
+import {
+  GetMultipleIdentitiesResponseBody,
+  GetSingleIdentityResponseBody,
+  RequestHeaders,
+  getMultipleIdentitiesResponseBody,
+  getSingleIdentityResponseBody,
+  requestHeaders,
+} from '@socialgouv/e2esdk-api'
+
 import { getIdentities, getIdentity } from '../database/models/identity.js'
 import type { App } from '../types'
 

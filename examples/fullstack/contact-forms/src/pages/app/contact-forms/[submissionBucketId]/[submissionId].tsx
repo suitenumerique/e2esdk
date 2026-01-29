@@ -15,7 +15,6 @@ import {
   Text,
   Textarea,
 } from '@chakra-ui/react'
-import { useE2ESDKClient } from '@socialgouv/e2esdk-react'
 import { EncryptedAvatar } from 'components/EncryptedAvatar'
 import {
   DecryptedComment,
@@ -43,6 +42,8 @@ import {
   FiShieldOff,
 } from 'react-icons/fi'
 import { z } from 'zod'
+
+import { useE2ESDKClient } from '@socialgouv/e2esdk-react'
 
 const SubmissionPage: NextPage = () => {
   const submissionBucketId = useSubmissionBucketIdUrlParam()

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import '@socialgouv/e2esdk-devtools'
+
 import HelloWorld from './components/HelloWorld.vue'
 </script>
 

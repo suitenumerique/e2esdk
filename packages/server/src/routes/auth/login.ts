@@ -1,18 +1,20 @@
 import { HandleLogin } from '@47ng/opaque-server'
+import { z } from 'zod'
+import { zodToJsonSchema } from 'zod-to-json-schema'
+
 import {
+  LoginFinal,
+  LoginFinalResponse,
+  LoginRequest,
+  LoginResponse,
   base64Bytes,
   identitySchema,
   loginFinal,
-  LoginFinal,
-  LoginFinalResponse,
   loginFinalResponse,
   loginRequest,
-  LoginRequest,
   loginResponse,
-  LoginResponse,
 } from '@socialgouv/e2esdk-api'
-import { z } from 'zod'
-import { zodToJsonSchema } from 'zod-to-json-schema'
+
 import { getUserDevice } from '../../database/models/devices.js'
 import { getIdentity } from '../../database/models/identity.js'
 import { env } from '../../env.js'

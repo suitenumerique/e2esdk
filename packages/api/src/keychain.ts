@@ -1,7 +1,8 @@
 import { z } from 'zod'
+
 import {
-  fingerprintSchema,
   PayloadType,
+  fingerprintSchema,
   secretBoxCiphertextV1Schema,
   signatureSchema,
   timestampSchema,

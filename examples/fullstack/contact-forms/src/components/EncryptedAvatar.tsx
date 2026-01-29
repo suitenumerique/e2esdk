@@ -1,8 +1,9 @@
 import { Avatar, AvatarProps } from '@chakra-ui/react'
-import type { FileMetadata } from '@socialgouv/e2esdk-crypto'
-import { useE2ESDKClient } from '@socialgouv/e2esdk-react'
 import { downloadAndDecryptFile } from 'lib/files'
 import React from 'react'
+
+import type { FileMetadata } from '@socialgouv/e2esdk-crypto'
+import { useE2ESDKClient } from '@socialgouv/e2esdk-react'
 
 export type EncryptedAvatarProps = Omit<AvatarProps, 'src'> & {
   metadata: FileMetadata

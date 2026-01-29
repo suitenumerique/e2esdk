@@ -1,9 +1,10 @@
 import { Center, Spinner } from '@chakra-ui/react'
-import { base64UrlDecode } from '@socialgouv/e2esdk-crypto'
 import type { NextPage } from 'next'
 import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
 import React from 'react'
+
+import { base64UrlDecode } from '@socialgouv/e2esdk-crypto'
 
 const ContactForm = dynamic(
   () => import('lib/contact-form').then(m => m.ContactForm),
