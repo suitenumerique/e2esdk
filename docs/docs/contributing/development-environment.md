@@ -55,9 +55,9 @@ The `dev` script will:
 - Build all packages in watch mode
 - Start the server with nodemon, watching its dependencies to
   allow auto-reloading the server when the sources change.
-  The server is listening on <https://localhost:3001>
-- Start a Vite host SPA for the devtools component, on <https://localhost:3000>
-- Start the Docusaurus documentation server on <http://localhost:3004/e2esdk>
+  The server is listening on [https://localhost:3001](https://localhost:3001)
+- Start a Vite host SPA for the devtools component, on [https://localhost:3000](https://localhost:3000)
+- Start the Docusaurus documentation server on [http://localhost:3004/e2esdk](http://localhost:3004/e2esdk)
 
 ## Port list
 

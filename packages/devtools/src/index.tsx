@@ -172,12 +172,14 @@ interface E2ESDKDevtoolsElementAttributes
 }
 
 declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'e2esdk-devtools': React.DetailedHTMLProps<
-        E2ESDKDevtoolsElementAttributes,
-        E2ESDKDevtoolsElement
-      >
+  namespace React {
+    namespace JSX {
+      interface IntrinsicElements {
+        'e2esdk-devtools': React.DetailedHTMLProps<
+          E2ESDKDevtoolsElementAttributes,
+          E2ESDKDevtoolsElement
+        >
+      }
     }
   }
 }

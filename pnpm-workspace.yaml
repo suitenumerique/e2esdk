@@ -1,6 +1,14 @@
 packages:
-  - "docs"
-  - "config/*"
-  - "packages/*"
-  - "examples/*"
-  - "examples/fullstack/*"
+  - docs
+  - config/*
+  - packages/*
+  - examples/*
+  - examples/fullstack/*
+
+onlyBuiltDependencies:
+  - '@swc/core'
+  - core-js
+  - core-js-pure
+  - esbuild
+  - sharp
+  - unrs-resolver

@@ -4,8 +4,6 @@
 # and simpler development).
 # Volumes are persisted in the .volumes/docker/e2esdk-dev directory.
 
-version: '3'
-
 name: e2esdk-dev
 
 services:

@@ -7,7 +7,7 @@
     "dev": "next dev --port 4000",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@chakra-ui/react": "^2.5.2",
@@ -21,13 +21,13 @@
     "@tanstack/react-query": "^4.28.0",
     "@tanstack/react-query-devtools": "^4.28.0",
     "formidable": "^2.1.1",
-    "framer-motion": "^7.10.3",
+    "framer-motion": "^12.29.2",
     "graphql": "^16.6.0",
     "graphql-request": "^5.2.0",
-    "next": "13.0.5",
+    "next": "16.1.6",
     "pretty-bytes": "^6.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "react-focus-lock": "^2.9.4",
     "react-hook-form": "^7.43.7",
     "react-icons": "^4.8.0",
@@ -36,11 +36,11 @@
   "devDependencies": {
     "@babel/core": "^7.21.3",
     "@types/formidable": "^2.0.5",
-    "@types/node": "18.11.10",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "eslint": "8.28.0",
-    "eslint-config-next": "13.0.5",
-    "typescript": "4.9.3"
+    "@types/node": "^22.9.3",
+    "@types/react": "^19.2.10",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "typescript": "^5.9.3"
   }
 }

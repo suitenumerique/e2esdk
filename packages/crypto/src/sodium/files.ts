@@ -111,9 +111,10 @@ export function decryptFileContents(
     const ciphertextSlice = ciphertext.slice(start, end)
     const clearText = sodium.crypto_secretstream_xchacha20poly1305_pull(
       state,
-      ciphertextSlice
+      ciphertextSlice,
+      null
     )
-    if (!clearText.message) {
+    if (!clearText || !clearText.message) {
       throw new Error('Failed to decrypt file')
     }
     clearTextBuffer.set(clearText.message, chunkIndex * chunkSize)

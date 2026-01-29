@@ -1,5 +1,4 @@
 import { thirtyTwoBytesBase64Schema } from '@socialgouv/e2esdk-api'
-import type { KeyPair } from 'libsodium-wrappers'
 import { base64UrlDecode, base64UrlEncode } from '../shared/codec'
 import { Sodium, sodium } from '../sodium/sodium'
 
@@ -61,7 +60,10 @@ export type EncryptedFormLocalState = {
   /**
    * Signature key pair to authenticate response submissions
    */
-  identity: Omit<KeyPair, 'keyType'>
+  identity: {
+    publicKey: Uint8Array
+    privateKey: Uint8Array
+  }
 }
 
 const storageKey = (namespace: string) => `e2esdk:forms:localState:${namespace}`

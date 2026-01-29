@@ -1,8 +1,11 @@
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import dns from 'node:dns'
+import path from 'node:path'
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // Show `localhost` rather than `127.0.0.1`
 // https://vitejs.dev/config/server-options.html#server-host
@@ -24,6 +27,14 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
+      '@socialgouv/e2esdk-client': path.resolve(
+        __dirname,
+        '../../packages/client/src'
+      ),
+      '@socialgouv/e2esdk-devtools': path.resolve(
+        __dirname,
+        '../../packages/devtools/src'
+      ),
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },

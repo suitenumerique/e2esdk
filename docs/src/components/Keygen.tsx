@@ -16,7 +16,9 @@ export const SignatureKeygenUI = () => {
 - SIGNATURE_PRIVATE_KEY=${sodium.to_base64(privateKey)}`)
   }, [])
 
-  React.useEffect(generate, [])
+  React.useEffect(() => {
+    generate()
+  }, [])
 
   return (
     <>

@@ -5,7 +5,7 @@ import styles from './styles.module.css'
 type FeatureItem = {
   title: string
   Svg: React.ComponentType<React.ComponentProps<'svg'>>
-  description: JSX.Element
+  description: React.JSX.Element
 }
 
 const FeatureList: FeatureItem[] = [
@@ -55,13 +55,13 @@ function Feature({ title, Svg, description }: FeatureItem) {
   )
 }
 
-export default function HomepageFeatures(): JSX.Element {
+export default function HomepageFeatures(): React.JSX.Element {
   return (
     <section className={styles.features}>
       <div className="container">
         <div className="row">
           {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+            <Feature {...props} key={idx} />
           ))}
         </div>
         <div className="row">
@@ -117,6 +117,7 @@ export default function HomepageFeatures(): JSX.Element {
                 src={
                   require('@site/static/img/schema-forms-encrypt.png').default
                 }
+                alt=""
               />
             </p>
             <p>
@@ -128,6 +129,7 @@ export default function HomepageFeatures(): JSX.Element {
                 src={
                   require('@site/static/img/schema-forms-decrypt.png').default
                 }
+                alt=""
               />
             </p>
           </div>

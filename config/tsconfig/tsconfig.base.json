@@ -3,6 +3,23 @@
   "compilerOptions": {
     // Type checking
     "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@socialgouv/e2esdk-api": ["../../packages/api/src"],
+      "@socialgouv/e2esdk-api/*": ["../../packages/api/src/*"],
+      "@socialgouv/e2esdk-client": ["../../packages/client/src"],
+      "@socialgouv/e2esdk-client/*": ["../../packages/client/src/*"],
+      "@socialgouv/e2esdk-crypto": ["../../packages/crypto/src"],
+      "@socialgouv/e2esdk-crypto/*": ["../../packages/crypto/src/*"],
+      "@socialgouv/e2esdk-devtools": ["../../packages/devtools/src"],
+      "@socialgouv/e2esdk-devtools/*": ["../../packages/devtools/src/*"],
+      "@socialgouv/e2esdk-generator": ["../../packages/generator/src"],
+      "@socialgouv/e2esdk-generator/*": ["../../packages/generator/src/*"],
+      "@socialgouv/e2esdk-react": ["../../packages/react/src"],
+      "@socialgouv/e2esdk-react/*": ["../../packages/react/src/*"],
+      "@socialgouv/e2esdk-server": ["../../packages/server/src"],
+      "@socialgouv/e2esdk-server/*": ["../../packages/server/src/*"]
+    },
 
     // Modules
     "module": "ESNext",

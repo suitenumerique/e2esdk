@@ -1,4 +1,3 @@
-import type { KeyPair } from 'libsodium-wrappers'
 import {
   multipartSignature,
   verifyMultipartSignature,
@@ -14,8 +13,14 @@ export function generateMainKey(sodium: Sodium) {
 type ClientIdentity = {
   userId: string
   keychainBaseKey: Uint8Array
-  sharing: Omit<KeyPair, 'keyType'>
-  signature: Omit<KeyPair, 'keyType'>
+  sharing: {
+    publicKey: Uint8Array
+    privateKey: Uint8Array
+  }
+  signature: {
+    publicKey: Uint8Array
+    privateKey: Uint8Array
+  }
   proof: string
 }
 

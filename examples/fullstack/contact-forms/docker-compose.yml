@@ -1,5 +1,3 @@
-version: '3'
-
 name: e2esdk-examples-contact-forms
 
 services:
