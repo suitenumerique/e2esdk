@@ -5,4 +5,4 @@
       use_prepared_statements: false
       database_url: postgres://postgres:password@app-db:5432/app
       isolation_level: read-committed
-  tables: "!include app/tables/tables.yaml"
+  tables: '!include app/tables/tables.yaml'
