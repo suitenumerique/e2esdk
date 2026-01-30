@@ -325,6 +325,9 @@ importers:
       '@socialgouv/e2esdk-config-typescript':
         specifier: workspace:*
         version: link:../../config/tsconfig
+      '@types/node':
+        specifier: ^22.19.7
+        version: 22.19.7
       sceau:
         specifier: ^1.3.0
         version: 1.3.0
