@@ -34,7 +34,7 @@
   "scripts": {
     "dev": "tsup --watch",
     "build:npm": "tsup --clean",
-    "typecheck": "tsc"
+    "typecheck": "tsc --noEmit --incremental false"
   },
   "dependencies": {
     "zod": "^3.21.4"

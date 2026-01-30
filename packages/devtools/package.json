@@ -40,7 +40,7 @@
     "build:npm": "run-p build:npm:*",
     "build:npm:bundle": "vite build",
     "build:npm:types": "tsup",
-    "typecheck": "tsc",
+    "typecheck": "tsc --noEmit --incremental false",
     "prepack": "sceau sign"
   },
   "peerDependencies": {

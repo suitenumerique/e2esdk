@@ -35,7 +35,7 @@
   "scripts": {
     "dev": "tsup --watch",
     "build:npm": "tsup --clean",
-    "typecheck": "tsc",
+    "typecheck": "tsc --noEmit --incremental false",
     "generate": "zx ./dist/generate.js",
     "prepack": "sceau sign"
   },

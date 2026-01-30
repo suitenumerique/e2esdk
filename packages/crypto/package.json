@@ -38,7 +38,7 @@
     "dev": "tsup --format esm --dts --watch",
     "build:npm": "tsup --clean --format esm,cjs --dts",
     "build:server": "tsup --clean --format esm",
-    "typecheck": "tsc",
+    "typecheck": "tsc --noEmit --incremental false",
     "test": "jest --color",
     "prepack": "sceau sign"
   },

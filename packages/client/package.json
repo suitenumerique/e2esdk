@@ -36,7 +36,7 @@
   "scripts": {
     "dev": "tsup --format esm --watch",
     "build:npm": "tsup --clean --format esm,cjs",
-    "typecheck": "tsc",
+    "typecheck": "tsc --noEmit --incremental false",
     "prepack": "sceau sign"
   },
   "dependencies": {
