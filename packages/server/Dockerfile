@@ -59,8 +59,8 @@ RUN corepack enable
 # (usually when running locally or in CI), or `--strict`
 # when built for production by the CD pipeline.
 ARG SCEAU_VERIFICATION_MODE
-ENV NODE_ENV production
-ENV PORT 3000
+ENV NODE_ENV="production"
+ENV PORT="3000"
 
 # Don't run production as root
 RUN addgroup --system --gid 1001 nodejs && \
