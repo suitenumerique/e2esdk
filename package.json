@@ -37,6 +37,12 @@
     "turbo": "^1.8.6",
     "typescript": "^5.9.3"
   },
+  "pnpm": {
+    "overrides": {
+      "sceau>@types/libsodium-wrappers": "false",
+      "sceau>libsodium-wrappers": "^0.8.2"
+    }
+  },
   "packageManager": "pnpm@10.28.2",
   "release": {
     "plugins": [
