@@ -1,5 +1,3 @@
-import { zodToJsonSchema } from 'zod-to-json-schema'
-
 import {
   PostBanRequestBody,
   RequestHeaders,
@@ -28,8 +26,8 @@ export default async function banRoutes(app: App) {
         summary: 'Remove access to a keychain',
         description:
           'This will remove any pending shared keys, owned keychain items and associated permissions.',
-        headers: zodToJsonSchema(requestHeaders),
-        body: zodToJsonSchema(postBanRequestBody),
+        headers: requestHeaders.toJSONSchema(),
+        body: postBanRequestBody.toJSONSchema(),
         response: {
           204: {
             type: 'null',

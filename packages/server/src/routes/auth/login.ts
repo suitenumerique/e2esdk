@@ -1,6 +1,5 @@
 import { HandleLogin } from '@47ng/opaque-server'
 import { z } from 'zod'
-import { zodToJsonSchema } from 'zod-to-json-schema'
 
 import {
   LoginFinal,
@@ -42,9 +41,9 @@ export default async function loginRoutes(app: App) {
       schema: {
         tags: ['auth'],
         summary: 'OPAQUE login start',
-        body: zodToJsonSchema(loginRequest, { $refStrategy: 'none' }),
+        body: loginRequest.toJSONSchema(),
         response: {
-          200: zodToJsonSchema(loginResponse, { $refStrategy: 'none' }),
+          200: loginResponse.toJSONSchema(),
         },
       },
     },
@@ -106,9 +105,9 @@ export default async function loginRoutes(app: App) {
       schema: {
         tags: ['auth'],
         summary: 'OPAQUE login finish',
-        body: zodToJsonSchema(loginFinal, { $refStrategy: 'none' }),
+        body: loginFinal.toJSONSchema(),
         response: {
-          200: zodToJsonSchema(loginFinalResponse, { $refStrategy: 'none' }),
+          200: loginFinalResponse.toJSONSchema(),
         },
       },
     },

@@ -1,5 +1,4 @@
 import { HandleRegistration } from '@47ng/opaque-server'
-import { zodToJsonSchema } from 'zod-to-json-schema'
 
 import {
   SignupCompleteResponse,
@@ -31,9 +30,9 @@ export default async function signupRoutes(app: App) {
       schema: {
         tags: ['auth'],
         summary: 'OPAQUE registration start',
-        body: zodToJsonSchema(signupRequest, { $refStrategy: 'none' }),
+        body: signupRequest.toJSONSchema(),
         response: {
-          200: zodToJsonSchema(signupResponse, { $refStrategy: 'none' }),
+          200: signupResponse.toJSONSchema(),
         },
       },
     },
@@ -86,11 +85,9 @@ export default async function signupRoutes(app: App) {
       schema: {
         tags: ['auth'],
         summary: 'OPAQUE registration finish',
-        body: zodToJsonSchema(signupRecord, { $refStrategy: 'none' }),
+        body: signupRecord.toJSONSchema(),
         response: {
-          201: zodToJsonSchema(signupCompleteResponse, {
-            $refStrategy: 'none',
-          }),
+          201: signupCompleteResponse.toJSONSchema(),
         },
       },
     },

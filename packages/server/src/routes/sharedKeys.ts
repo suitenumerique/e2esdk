@@ -1,5 +1,4 @@
 import { z } from 'zod'
-import { zodToJsonSchema } from 'zod-to-json-schema'
 
 import {
   GetSharedKeysResponseBody,
@@ -34,8 +33,8 @@ export default async function sharedKeysRoutes(app: App) {
       schema: {
         tags: ['sharedKeys'],
         summary: 'Share a key with someone',
-        headers: zodToJsonSchema(requestHeaders),
-        body: zodToJsonSchema(postSharedKeyBody, { $refStrategy: 'none' }),
+        headers: requestHeaders.toJSONSchema(),
+        body: postSharedKeyBody.toJSONSchema(),
         response: {
           201: {
             type: 'null',
@@ -135,11 +134,9 @@ export default async function sharedKeysRoutes(app: App) {
       schema: {
         tags: ['sharedKeys'],
         summary: 'List incoming keys shared with me',
-        headers: zodToJsonSchema(requestHeaders),
+        headers: requestHeaders.toJSONSchema(),
         response: {
-          200: zodToJsonSchema(getSharedKeysResponseBody, {
-            $refStrategy: 'none',
-          }),
+          200: getSharedKeysResponseBody.toJSONSchema(),
         },
       },
     },
@@ -160,11 +157,9 @@ export default async function sharedKeysRoutes(app: App) {
       schema: {
         tags: ['sharedKeys'],
         summary: 'List keys I have shared with others',
-        headers: zodToJsonSchema(requestHeaders),
+        headers: requestHeaders.toJSONSchema(),
         response: {
-          200: zodToJsonSchema(getSharedKeysResponseBody, {
-            $refStrategy: 'none',
-          }),
+          200: getSharedKeysResponseBody.toJSONSchema(),
         },
       },
     },
@@ -190,8 +185,8 @@ export default async function sharedKeysRoutes(app: App) {
       schema: {
         tags: ['sharedKeys'],
         summary: 'Remove a shared key',
-        params: zodToJsonSchema(deleteSharedKeyUrlParams),
-        headers: zodToJsonSchema(requestHeaders),
+        params: deleteSharedKeyUrlParams.toJSONSchema(),
+        headers: requestHeaders.toJSONSchema(),
         response: {
           200: {
             type: 'null',

@@ -1,5 +1,4 @@
 import { z } from 'zod'
-import { zodToJsonSchema } from 'zod-to-json-schema'
 
 import {
   GetKeychainResponseBody,
@@ -39,10 +38,8 @@ export default async function keychainRoutes(app: App) {
       schema: {
         tags: ['keychain'],
         summary: 'Add a key to my keychain',
-        headers: zodToJsonSchema(requestHeaders),
-        body: zodToJsonSchema(postKeychainItemRequestBody, {
-          $refStrategy: 'none',
-        }),
+        headers: requestHeaders.toJSONSchema(),
+        body: postKeychainItemRequestBody.toJSONSchema(),
         response: {
           201: {
             type: 'null',
@@ -213,11 +210,9 @@ export default async function keychainRoutes(app: App) {
       schema: {
         tags: ['keychain'],
         summary: 'Get my own keys',
-        headers: zodToJsonSchema(requestHeaders),
+        headers: requestHeaders.toJSONSchema(),
         response: {
-          200: zodToJsonSchema(getKeychainResponseBody, {
-            $refStrategy: 'none',
-          }),
+          200: getKeychainResponseBody.toJSONSchema(),
         },
       },
     },
@@ -243,8 +238,8 @@ export default async function keychainRoutes(app: App) {
       schema: {
         tags: ['keychain'],
         summary: 'Delete a keychain entry',
-        params: zodToJsonSchema(deleteKeychainEntryURLParams),
-        headers: zodToJsonSchema(requestHeaders),
+        params: deleteKeychainEntryURLParams.toJSONSchema(),
+        headers: requestHeaders.toJSONSchema(),
         response: {
           200: {
             type: 'null',

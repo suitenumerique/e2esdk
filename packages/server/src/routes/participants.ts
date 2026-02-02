@@ -1,5 +1,4 @@
 import { z } from 'zod'
-import { zodToJsonSchema } from 'zod-to-json-schema'
 
 import {
   GetParticipantsResponseBody,
@@ -29,14 +28,10 @@ export default async function participantsRoutes(app: App) {
       schema: {
         tags: ['identity', 'permissions'],
         summary: 'List who has access to a key',
-        params: zodToJsonSchema(getParticipantsUrlParams, {
-          $refStrategy: 'none',
-        }),
-        headers: zodToJsonSchema(requestHeaders),
+        params: getParticipantsUrlParams.toJSONSchema(),
+        headers: requestHeaders.toJSONSchema(),
         response: {
-          200: zodToJsonSchema(getParticipantsResponseBody, {
-            $refStrategy: 'none',
-          }),
+          200: getParticipantsResponseBody.toJSONSchema(),
         },
       },
     },

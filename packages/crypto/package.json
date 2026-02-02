@@ -47,7 +47,7 @@
     "@stablelib/hex": "^1.0.1",
     "libsodium-wrappers": "^0.8.2",
     "secure-json-parse": "^2.7.0",
-    "zod": "^3.21.4"
+    "zod": "^4.1.12"
   },
   "devDependencies": {
     "@socialgouv/e2esdk-config-jest": "workspace:*",

@@ -66,7 +66,7 @@ const encryptedFormSubmissionMetadataSchema = z.object({
 
 const encryptedFormSubmissionSchema = z.object({
   metadata: encryptedFormSubmissionMetadataSchema,
-  encrypted: z.record(encryptedFieldSchema.nullish()),
+  encrypted: z.record(z.string(), encryptedFieldSchema.nullish()),
 })
 
 export type EncryptedFormSubmission<FormData extends object> = {

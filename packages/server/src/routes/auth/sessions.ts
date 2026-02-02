@@ -1,5 +1,4 @@
 import { z } from 'zod'
-import { zodToJsonSchema } from 'zod-to-json-schema'
 
 import {
   ActiveSession,
@@ -43,11 +42,9 @@ export default async function sessionsRoutes(app: App) {
       schema: {
         tags: ['auth', 'sessions'],
         summary: 'List active sessions for the logged-in user',
-        headers: zodToJsonSchema(requestHeaders, { $refStrategy: 'none' }),
+        headers: requestHeaders.toJSONSchema(),
         response: {
-          200: zodToJsonSchema(getActiveSessionsResponseBody, {
-            $refStrategy: 'none',
-          }),
+          200: getActiveSessionsResponseBody.toJSONSchema(),
         },
       },
     },
@@ -89,7 +86,7 @@ export default async function sessionsRoutes(app: App) {
         tags: ['auth', 'sessions'],
         summary: 'Revoke all other active sessions for the logged-in user',
         description: 'But keep the current session active',
-        headers: zodToJsonSchema(requestHeaders, { $refStrategy: 'none' }),
+        headers: requestHeaders.toJSONSchema(),
         response: {
           204: {
             type: 'null',
@@ -132,10 +129,8 @@ export default async function sessionsRoutes(app: App) {
       schema: {
         tags: ['auth', 'sessions'],
         summary: 'Revoke an active session',
-        params: zodToJsonSchema(revokeSessionUrlParams, {
-          $refStrategy: 'none',
-        }),
-        headers: zodToJsonSchema(requestHeaders, { $refStrategy: 'none' }),
+        params: revokeSessionUrlParams.toJSONSchema(),
+        headers: requestHeaders.toJSONSchema(),
         response: {
           204: {
             type: 'null',

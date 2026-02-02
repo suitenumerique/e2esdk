@@ -78,7 +78,7 @@ const envSchema = z.object({
   /**
    * Debug mode increases log level to `debug` and prints extra information.
    */
-  DEBUG: booleanSchema.default('false'),
+  DEBUG: booleanSchema.default(false),
 
   /**
    * Optional way to identify a deployment. Used in logs and Sentry release.
@@ -91,7 +91,7 @@ const envSchema = z.object({
    * to enable end-to-end transport security, but it may be bypassed for
    * local development and tests.
    */
-  DISABLE_TLS: booleanSchema.optional().default('false'),
+  DISABLE_TLS: booleanSchema.optional().default(false),
 
   /** Allow the server to skip code signature check in test environments.
    *
@@ -100,12 +100,12 @@ const envSchema = z.object({
    * In order to avoid having to self-sign a local development environment,
    * we can override the code signature check using this environment variable.
    */
-  DISABLE_CODE_SIGNATURE_CHECK: booleanSchema.optional().default('false'),
+  DISABLE_CODE_SIGNATURE_CHECK: booleanSchema.optional().default(false),
 
   /**
    * Allow disabling signups for demo instances.
    */
-  DISABLE_SIGNUP: booleanSchema.optional().default('false'),
+  DISABLE_SIGNUP: booleanSchema.optional().default(false),
 
   /**
    * URL to a webhook server that will be called with authorization
@@ -117,7 +117,7 @@ const envSchema = z.object({
    * CORS is disabled in local development, use this to force it,
    * in conjunction with the `CORS_ALLOWED_ORIGINS` environment variable.
    */
-  CORS_FORCE_ENABLE: booleanSchema.default('false'),
+  CORS_FORCE_ENABLE: booleanSchema.default(false),
 
   /**
    * List of comma-separated origins allowed for CORS.
@@ -164,9 +164,9 @@ const res = envSchema.safeParse(process.env)
 if (!res.success) {
   console.error(
     `Missing or invalid environment variable${
-      res.error.errors.length > 1 ? 's' : ''
+      res.error.issues.length > 1 ? 's' : ''
     }:
-${res.error.errors.map(error => `  ${error.path}: ${error.message}`).join('\n')}
+${res.error.issues.map(issue => `  ${issue.path}: ${issue.message}`).join('\n')}
 `
   )
   process.exit(1)

@@ -31,7 +31,7 @@
     "react-focus-lock": "^2.9.4",
     "react-hook-form": "^7.43.7",
     "react-icons": "^4.8.0",
-    "zod": "^3.21.4"
+    "zod": "^4.1.12"
   },
   "devDependencies": {
     "@babel/core": "^7.21.3",

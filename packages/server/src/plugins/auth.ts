@@ -2,7 +2,6 @@ import type { FastifyPluginAsync, FastifyRequest } from 'fastify'
 import fp from 'fastify-plugin'
 import crypto from 'node:crypto'
 import { z } from 'zod'
-import { zodToJsonSchema } from 'zod-to-json-schema'
 
 import {
   Identity,
@@ -80,7 +79,7 @@ type AuthDecoration = {
    * JSON Schema for authentication headers, precomputed here
    * and used when definining header parsers in route handlers.
    */
-  headers: ReturnType<typeof zodToJsonSchema>
+  headers: ReturnType<typeof requestHeaders.toJSONSchema>
 }
 
 declare module 'fastify' {
@@ -174,7 +173,7 @@ const authPlugin: FastifyPluginAsync = async (app: App) => {
       }
       return keys
     },
-    headers: zodToJsonSchema(requestHeaders, { $refStrategy: 'none' }),
+    headers: requestHeaders.toJSONSchema(),
   })
 
   app.decorate(
@@ -192,7 +191,7 @@ const authPlugin: FastifyPluginAsync = async (app: App) => {
             msg: 'Missing public key authentication headers',
             error: parsedHeaders.error,
             remediation:
-              "Set this route's querystring schema to `zodToJsonSchema(requestHeaders)` to validate the request before attempting authentication.",
+              "Set this route's querystring schema to `requestHeaders.toJSONSchema()` to validate the request before attempting authentication.",
           })
           throw req.server.httpErrors.badRequest(
             'Missing public key authentication headers'

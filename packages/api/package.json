@@ -42,7 +42,7 @@
     "prepack": "sceau sign"
   },
   "dependencies": {
-    "zod": "^3.21.4"
+    "zod": "^4.1.12"
   },
   "devDependencies": {
     "@socialgouv/e2esdk-config-jest": "workspace:*",

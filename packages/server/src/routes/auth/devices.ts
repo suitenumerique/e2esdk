@@ -1,6 +1,5 @@
 import { HandleRegistration } from '@47ng/opaque-server'
 import { z } from 'zod'
-import { zodToJsonSchema } from 'zod-to-json-schema'
 
 import {
   ActiveSession,
@@ -53,13 +52,9 @@ export default async function devicesRoutes(app: App) {
         tags: ['auth', 'devices'],
         summary: 'Device enrollment start',
         headers: app.auth.headers,
-        body: zodToJsonSchema(deviceEnrollmentRequest, {
-          $refStrategy: 'none',
-        }),
+        body: deviceEnrollmentRequest.toJSONSchema(),
         response: {
-          200: zodToJsonSchema(deviceEnrollmentResponse, {
-            $refStrategy: 'none',
-          }),
+          200: deviceEnrollmentResponse.toJSONSchema(),
         },
       },
     },
@@ -109,11 +104,9 @@ export default async function devicesRoutes(app: App) {
         tags: ['auth', 'devices'],
         summary: 'Device enrollment finish',
         headers: app.auth.headers,
-        body: zodToJsonSchema(deviceEnrollmentRecord, { $refStrategy: 'none' }),
+        body: deviceEnrollmentRecord.toJSONSchema(),
         response: {
-          201: zodToJsonSchema(deviceEnrolledResponse, {
-            $refStrategy: 'none',
-          }),
+          201: deviceEnrolledResponse.toJSONSchema(),
         },
       },
     },
@@ -173,9 +166,7 @@ export default async function devicesRoutes(app: App) {
         summary: 'List enrolled devices owned by the current user',
         headers: app.auth.headers,
         response: {
-          200: zodToJsonSchema(listDevicesResponseBody, {
-            $refStrategy: 'none',
-          }),
+          200: listDevicesResponseBody.toJSONSchema(),
         },
       },
     },
@@ -231,13 +222,9 @@ export default async function devicesRoutes(app: App) {
         tags: ['devices'],
         summary: 'Get an enrolled device by ID for the current user',
         headers: app.auth.headers,
-        params: zodToJsonSchema(deviceIdUrlParams, {
-          $refStrategy: 'none',
-        }),
+        params: deviceIdUrlParams.toJSONSchema(),
         response: {
-          200: zodToJsonSchema(deviceSchema, {
-            $refStrategy: 'none',
-          }),
+          200: deviceSchema.toJSONSchema(),
         },
       },
     },
@@ -281,10 +268,8 @@ export default async function devicesRoutes(app: App) {
       schema: {
         tags: ['auth', 'devices'],
         summary: 'Revoke an enrolled device',
-        headers: zodToJsonSchema(requestHeaders, { $refStrategy: 'none' }),
-        params: zodToJsonSchema(deviceIdUrlParams, {
-          $refStrategy: 'none',
-        }),
+        headers: requestHeaders.toJSONSchema(),
+        params: deviceIdUrlParams.toJSONSchema(),
         response: {
           204: {
             type: 'null',

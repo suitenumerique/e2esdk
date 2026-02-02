@@ -1,6 +1,5 @@
 import mitt from 'mitt'
 import { z } from 'zod'
-import { zodToJsonSchema } from 'zod-to-json-schema'
 
 import {
   WebSocketNotificationTypes,
@@ -40,7 +39,7 @@ export default async function notificationsRoutes(app: App) {
       }),
       schema: {
         summary: 'WebSocket notifications',
-        querystring: zodToJsonSchema(querystringSchema),
+        querystring: querystringSchema.toJSONSchema(),
       },
     },
     async function websocketNotifications(connection, req) {

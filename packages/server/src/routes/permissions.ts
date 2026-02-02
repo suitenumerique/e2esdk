@@ -1,5 +1,4 @@
 import { z } from 'zod'
-import { zodToJsonSchema } from 'zod-to-json-schema'
 
 import {
   PermissionFlags,
@@ -34,10 +33,10 @@ export default async function permissionsRoutes(app: App) {
       schema: {
         tags: ['permissions'],
         summary: 'Get permissions for a namespace',
-        params: zodToJsonSchema(getPermissionsUrlParams),
-        headers: zodToJsonSchema(requestHeaders),
+        params: getPermissionsUrlParams.toJSONSchema(),
+        headers: requestHeaders.toJSONSchema(),
         response: {
-          200: zodToJsonSchema(permissionFlags),
+          200: permissionFlags.toJSONSchema(),
         },
       },
     },
@@ -66,8 +65,8 @@ export default async function permissionsRoutes(app: App) {
       schema: {
         tags: ['permissions'],
         summary: 'Update permissions for a user & keychain',
-        headers: zodToJsonSchema(requestHeaders),
-        body: zodToJsonSchema(postPermissionRequestBody),
+        headers: requestHeaders.toJSONSchema(),
+        body: postPermissionRequestBody.toJSONSchema(),
         response: {
           204: {
             type: 'null',

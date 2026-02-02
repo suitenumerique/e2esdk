@@ -1,5 +1,4 @@
 import { z } from 'zod'
-import { zodToJsonSchema } from 'zod-to-json-schema'
 
 import { env } from '../env.js'
 import type { App } from '../types'
@@ -42,7 +41,7 @@ export default async function infoRoutes(app: App) {
       schema: {
         summary: 'Get server info',
         response: {
-          200: zodToJsonSchema(infoResponseBody),
+          200: infoResponseBody.toJSONSchema(),
         },
       },
     },

@@ -1,5 +1,4 @@
 import { z } from 'zod'
-import { zodToJsonSchema } from 'zod-to-json-schema'
 
 import {
   GetMultipleIdentitiesResponseBody,
@@ -35,12 +34,10 @@ export default async function identitiesRoutes(app: App) {
       schema: {
         tags: ['identity'],
         summary: 'Get a single user identity',
-        params: zodToJsonSchema(userIdParams),
-        headers: zodToJsonSchema(requestHeaders),
+        params: userIdParams.toJSONSchema(),
+        headers: requestHeaders.toJSONSchema(),
         response: {
-          200: zodToJsonSchema(getSingleIdentityResponseBody, {
-            $refStrategy: 'none',
-          }),
+          200: getSingleIdentityResponseBody.toJSONSchema(),
         },
       },
     },
@@ -70,12 +67,10 @@ export default async function identitiesRoutes(app: App) {
       schema: {
         tags: ['identity'],
         summary: 'Get multiple user identities',
-        params: zodToJsonSchema(userIdsParams),
-        headers: zodToJsonSchema(requestHeaders),
+        params: userIdsParams.toJSONSchema(),
+        headers: requestHeaders.toJSONSchema(),
         response: {
-          200: zodToJsonSchema(getMultipleIdentitiesResponseBody, {
-            $refStrategy: 'none',
-          }),
+          200: getMultipleIdentitiesResponseBody.toJSONSchema(),
         },
       },
     },
