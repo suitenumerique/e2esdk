@@ -1,6 +1,6 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "pipeline": {
+  "tasks": {
     "build:npm": {
       "dependsOn": ["^build:npm"],
       "outputs": ["dist/**", "build/**", ".vite/**"]
