@@ -1,3 +1,6 @@
+import addFormats from 'ajv-formats'
+import Ajv2020 from 'ajv/dist/2020.js'
+import fastUri from 'fast-uri'
 import { createServer as createFastifyServer } from 'fastify-micro'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -148,6 +151,27 @@ export function createServer() {
         app.log.info('Closed all connections to backing services')
       }
     },
+  })
+
+  // By default Fastify is using the JSON schema specification "draft 7" whereas new librairies like Zod v4
+  // by default generates schemas for the specification "2020-12", so make sure the AJV instance is for this specification
+  // (otherwise the schema parsing would not work)
+  const ajv = new Ajv2020({
+    // We reuse the initial Fastify parameters they pass to be "safe"
+    // Ref: https://fastify.dev/docs/v4.29.x/Reference/Validation-and-Serialization/#validator-compiler
+    coerceTypes: 'array',
+    useDefaults: true,
+    removeAdditional: true,
+    uriResolver: fastUri,
+    addUsedSchema: false,
+    allErrors: false, // Explicitly set allErrors to `false`. When set to `true`, a DoS attack is possible.
+  })
+
+  // Native formats like "uuid" are not supported by default, so adding them
+  addFormats(ajv)
+
+  app.setValidatorCompiler(({ schema, method, url, httpPart }) => {
+    return ajv.compile(schema)
   })
 
   app.ready(() => {
