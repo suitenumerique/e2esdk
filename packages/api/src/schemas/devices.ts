@@ -22,7 +22,7 @@ export function encodeDeviceRegistrationURI(
 
 export function decodeDeviceRegistrationURI(uri: string) {
   const url = new URL(uri)
-  if (url.protocol !== 'e2esdk:' || url.pathname !== '//register-device') {
+  if (url.protocol !== 'e2esdk:' || url.host !== 'register-device') {
     throw new Error('Invalid device registration data')
   }
   const userId = identitySchema.shape.userId.parse(
