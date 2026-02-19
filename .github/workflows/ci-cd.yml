@@ -17,20 +17,20 @@ jobs:
     name: Integration
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v4
         with:
           version: 8
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
           node-version: lts/*
           cache: pnpm
 
       - name: Turbo Cache
         id: turbo-cache
-        uses: actions/cache@v3
+        uses: actions/cache@v5
         with:
           path: node_modules/.cache/turbo
           key: turbo-${{ github.sha }}
@@ -62,7 +62,7 @@ jobs:
         run: pnpm build:npm
 
       - name: Build (Docker)
-        uses: docker/build-push-action@v4
+        uses: docker/build-push-action@v6
         with:
           context: .
           file: packages/server/Dockerfile
@@ -81,13 +81,13 @@ jobs:
     # if: ${{ github.ref_name == 'main' || github.ref_name == 'beta' }}
     if: ${{ github.ref_name == 'beta' }}
     steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v4
         with:
           version: 7
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
           node-version: lts/*
           cache: pnpm
@@ -164,13 +164,13 @@ jobs:
         id: timestamp
         run: echo "timestamp=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> $GITHUB_OUTPUT
 
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v4
         with:
           version: 7
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
           node-version: lts/*
           cache: pnpm
@@ -211,14 +211,14 @@ jobs:
           echo '__TAGS_EOF__' >> $GITHUB_OUTPUT
 
       - name: Docker registry authentication
-        uses: docker/login-action@v2
+        uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ github.token }}
 
       - name: Build & Publish (Docker)
-        uses: docker/build-push-action@v4
+        uses: docker/build-push-action@v6
         id: docker-build-push
         with:
           context: .
